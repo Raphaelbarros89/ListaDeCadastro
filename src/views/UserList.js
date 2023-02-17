@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 export default props => {
 
-    const { state } = useContext(UsersContext)
+    const { state, dispatch } = useContext(UsersContext)
  
     // Confirma se o usuário quer excluir
     function confirmUserDelete(user) {
@@ -15,7 +15,10 @@ export default props => {
             {
                 text: "Sim ",
                 onPress() {
-                    console.warn("Delete" + user.id)
+                    dispatch({
+                        type: 'deleteUser',
+                        payload: user,
+                    })
                 }
             },
             { text: "Não" }
