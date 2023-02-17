@@ -1,13 +1,12 @@
 import { Avatar, Button, Icon, ListItem } from "@rneui/base";
-import React from "react";
 import { View, FlatList, SafeAreaView, Alert } from "react-native";
 import UsersContext from "../context/UserContext";
+import { useContext } from "react";
 
 
 export default props => {
 
     const { state } = useContext(UsersContext)
-    console.warn(Object.keys(ctx.state))
  
     // Confirma se o usuário quer excluir
     function confirmUserDelete(user) {
