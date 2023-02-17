@@ -8,6 +8,7 @@ import { Button, Icon } from "@rneui/base";
 const Stack = createNativeStackNavigator ()
 
 export default props => {
+    
     return (
         <NavigationContainer>
             <Stack.Navigator
@@ -16,7 +17,7 @@ export default props => {
                 <Stack.Screen
                     name="UserList"
                     component={UserList}
-                    options={() =>{
+                    options={({navigation}) =>{
                         return {
                             title: 'Lista de Usuários',
                             headerRight: () => (
