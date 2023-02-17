@@ -1,6 +1,6 @@
 import { Avatar, Button, Icon, ListItem } from "@rneui/base";
 import React from "react";
-import { View, Text, FlatList, SafeAreaView, Alert } from "react-native";
+import { View, FlatList, SafeAreaView, Alert } from "react-native";
 import users from "../data/users";
 
 export default props => {
