@@ -9,7 +9,7 @@ export default ({route, navigation}) => {
 
     return (
         <View>
-            <Text>Name</Text>
+            <Text>Nome</Text>
             <TextInput 
                 style={style.input}
                 onChangeText={name => setUser ({...user, name})}
@@ -27,7 +27,7 @@ export default ({route, navigation}) => {
             <TextInput 
                 style={style.input}
                 onChangeText={avatarUrl => setUser ({...user, avatarUrl})}
-                placeholder='Informe o Email'
+                placeholder='Informe a Url'
                 value={user.avatarUrl}
                 />
                 <Button 

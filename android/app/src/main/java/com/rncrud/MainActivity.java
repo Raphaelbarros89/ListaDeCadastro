@@ -22,6 +22,14 @@ protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(null);
 }
 
+@Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        FragmentManager fragmentManager = this.getSupportFragmentManager();
+        MyDialogFragment.showMe(fragmentManager, "ほげ");
+    }
   /**
    * Returns the instance of the {@link ReactActivityDelegate}. Here we use a util class {@link
    * DefaultReactActivityDelegate} which allows you to easily enable Fabric and Concurrent React
