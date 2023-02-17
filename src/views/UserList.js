@@ -1,9 +1,13 @@
 import { Avatar, Button, Icon, ListItem } from "@rneui/base";
 import React from "react";
 import { View, FlatList, SafeAreaView, Alert } from "react-native";
-import users from "../data/users";
+import UsersContext from "../context/UserContext";
+
 
 export default props => {
+
+    const { state } = useContext(UsersContext)
+    console.warn(Object.keys(ctx.state))
  
     // Confirma se o usuário quer excluir
     function confirmUserDelete(user) {
@@ -14,7 +18,8 @@ export default props => {
                 onPress() {
                     console.warn("Delete" + user.id)
                 }
-            }, { text: "Não" }
+            },
+            { text: "Não" }
         ])
     }
  
@@ -64,7 +69,7 @@ export default props => {
     return (
         <SafeAreaView>
             <FlatList
-                data={users}
+                data={state.users}
                 keyExtractor={user => user.id.toString()}
                 renderItem={getUserItem}
             />
